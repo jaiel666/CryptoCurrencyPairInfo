@@ -10,11 +10,8 @@ class CryptoInfo
 
     public function __construct()
     {
-        $certificatePath = 'C:\Users\turis\PhpstormProjects/cacert.pem';
 
-        $this->client = new Client([
-            'verify' => $certificatePath,
-        ]);
+        $this->client = new Client();
     }
 
     public function get24HourInfo(CurrencyPair $pair)
